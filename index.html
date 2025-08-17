@@ -1,312 +1,320 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <!-- Basic -->
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- SEO -->
+  <title>Outstanding Orthodontist: No More Artifactual Teeth in Talking Face</title>
+  <meta name="description" content="Project page for OrthoNet: a plug-and-play framework that suppresses artifactual teeth and stabilizes dental appearance for audio-driven talking face synthesis, delivering natural, temporally consistent results." />
+  <meta name="keywords" content="OrthoNet, talking face, teeth stabilization, audio-driven animation, temporal consistency, detail-oriented aligner, memory-guided stabilizer" />
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Outstanding Orthodontist: No More Artifactual Teeth in Talking Face" />
+  <meta property="og:description" content="OrthoNet aligns and stabilizes teeth to eliminate artifacts in talking face synthesis, improving perceptual quality and temporal consistency." />
+  <meta property="og:url" content="https://YOUR-DOMAIN.TLD/orthonet/" />
+  <!-- IMPORTANT: put your banner here -->
+  <meta property="og:image" content="static/images/orthonet_banner.png" />
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Outstanding Orthodontist: No More Artifactual Teeth in Talking Face" />
+  <meta name="twitter:description" content="OrthoNet: eliminating artifactual teeth and stabilizing dental appearance for natural, consistent talking faces." />
+  <meta name="twitter:image" content="static/images/orthonet_banner.png" />
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+  <!-- Favicons (optional)
+  <link rel="icon" href="static/images/favicon.ico" />
+  -->
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <!-- Bulma + Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+
+  <!-- Minimal styles -->
+  <style>
+    :root { --maxw: 1100px; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+    .container.is-max-desktop { max-width: var(--maxw); }
+    .hero.is-light { background: #fafafa; }
+    .publication-title { line-height: 1.15; }
+    .author-block a { text-decoration: none; }
+    .buttons .button.is-light { border: 1px solid #e5e5e5; }
+    .teaser video, .carousel video, .carousel img { width: 100%; height: auto; border-radius: 10px; }
+    .section-title { margin-bottom: 0.75rem; }
+    .bibtex pre { white-space: pre; overflow-x: auto; }
+    .is-muted { color: #6b7280; }
+    .footer { padding-top: 2rem; padding-bottom: 2rem; }
+    .carousel-nav { display: flex; gap: .5rem; justify-content: center; margin-top: .75rem; }
+    .carousel-nav button { border: 1px solid #e5e5e5; background: white; border-radius: 8px; padding: .35rem .6rem; }
+    .poster-iframe { width: 100%; height: 720px; border: none; border-radius: 10px; }
+    .hero .title { font-weight: 800; }
+    .hero .subtitle { font-weight: 600; color: #1f2937; }
+    .tag.is-venue { background:#eef2ff; color:#3730a3; border:1px solid #c7d2fe; }
+  </style>
+
+  <!-- (Optional) If you don't need jQuery, remove this and keep vanilla JS below -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script> -->
 </head>
+
 <body>
 
-
-  <section class="hero">
+  <!-- ===== HERO ===== -->
+  <section class="hero is-light">
     <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+      <div class="container is-max-desktop has-text-centered">
+        <h1 class="title is-1 publication-title">Outstanding Orthodontist: No More Artifactual Teeth in Talking Face</h1>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+        <p class="subtitle is-5">
+          <span class="author-block">
+            <a href="mailto:tk1076435968@gmail.com" target="_blank" rel="noopener">Zibo Su</a>,
+            <a href="#" target="_blank" rel="noopener">Ziqi Zhang</a>,
+            <a href="#" target="_blank" rel="noopener">Kun Wei*</a>,
+            <a href="#" target="_blank" rel="noopener">Xu Yang</a>,
+            <a href="#" target="_blank" rel="noopener">Cheng Deng</a>
+          </span>
+        </p>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+        <p class="is-size-5">
+          <span>Xidian University</span>
+          <br />
+          <span class="tag is-venue is-medium">Preprint · 2025</span>
+          <!-- If accepted, replace the tag above with e.g., "CVPR 2026" -->
+        </p>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+        <div class="buttons is-centered mt-4">
+          <!-- Paper PDF (local for now; replace with arXiv when available) -->
+          <a class="button is-light" href="static/pdfs/orthonet_outstanding_orthodontist.pdf" target="_blank" rel="noopener">
+            <span class="icon"><i class="fa-solid fa-file-pdf"></i></span>
+            <span>Paper (PDF)</span>
+          </a>
 
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
+          <!-- Supplementary -->
+          <a class="button is-light" href="static/pdfs/orthonet_supplementary.pdf" target="_blank" rel="noopener">
+            <span class="icon"><i class="fa-regular fa-file-lines"></i></span>
+            <span>Supplementary</span>
+          </a>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-            </div>
-          </div>
+          <!-- Code -->
+          <a class="button is-light" href="https://github.com/YOUR-ORG/orthonet" target="_blank" rel="noopener">
+            <span class="icon"><i class="fa-brands fa-github"></i></span>
+            <span>Code</span>
+          </a>
+
+          <!-- ArXiv abstract (uncomment when available)
+          <a class="button is-light" href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noopener">
+            <span class="icon"><i class="fa-solid fa-book-open"></i></span>
+            <span>arXiv</span>
+          </a>
+          -->
+
+          <!-- DOI (uncomment when available)
+          <a class="button is-light" href="https://doi.org/xx.xxxx/xxxxx" target="_blank" rel="noopener">
+            <span class="icon"><i class="fa-solid fa-link"></i></span>
+            <span>DOI</span>
+          </a>
+          -->
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
       </div>
     </div>
   </section>
-<!--End paper poster -->
 
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
+  <!-- ===== TEASER ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Teaser</h2>
+      <div class="teaser">
+        <!-- Replace with your teaser; poster improves LCP -->
+        <video
+          src="static/videos/banner_video.mp4"
+          poster="static/images/teaser_poster.jpg"
+          controls
+          muted
+          playsinline
+          preload="metadata">
+        </video>
+        <p class="is-size-6 mt-3">
+          We introduce <b>OrthoNet</b>, a plug-and-play module composed of a <i>Detail-oriented Teeth Aligner</i> and a
+          <i>Memory-guided Teeth Stabilizer</i>, which effectively removes artifactual teeth and maintains cross-frame consistency
+          in audio-driven talking face synthesis.
+        </p>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- ===== ABSTRACT ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Abstract</h2>
+      <div class="content is-size-6">
+        <p>
+          Audio-driven talking face methods often suffer from <em>artifactual</em> or <em>inconsistent</em> teeth, degrading realism and temporal coherence.
+          We propose <strong>OrthoNet</strong>, a lightweight, plug-and-play framework that (1) aligns the dental region with
+          shape-aware, detail-preserving cues and (2) stabilizes teeth appearance through a long–short term memory design,
+          yielding natural and temporally consistent results across diverse identities and speaking conditions.
+          Extensive experiments show OrthoNet reduces artifacts and improves perception metrics over strong baselines,
+          without sacrificing lip–audio synchronization. Code and models will be released.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- End of Statcounter Code -->
+  <!-- ===== IMAGE CAROUSEL (RESULTS) ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Qualitative Results</h2>
 
-  </body>
-  </html>
+      <div id="results-carousel-images" class="carousel">
+        <img src="static/images/carousel1.jpg" alt="Qualitative comparison: OrthoNet reduces dental artifacts versus baseline under occlusion." loading="lazy">
+        <img src="static/images/carousel2.jpg" alt="Temporal consistency across frames: stable teeth appearance with OrthoNet." loading="lazy">
+        <img src="static/images/carousel3.jpg" alt="Close-up region: aligned dental structure and improved realism." loading="lazy">
+        <img src="static/images/carousel4.jpg" alt="Robustness across identities and lighting with OrthoNet." loading="lazy">
+      </div>
+
+      <div class="carousel-nav" aria-label="image carousel navigation">
+        <button type="button" data-target="#results-carousel-images" data-dir="prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button type="button" data-target="#results-carousel-images" data-dir="next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== YOUTUBE DEMO ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Demo Video</h2>
+      <div class="video is-16by9">
+        <iframe
+          class="has-ratio"
+          width="640" height="360"
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="OrthoNet Presentation"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO CAROUSEL ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">More Clips</h2>
+
+      <div id="results-carousel-videos" class="carousel">
+        <video src="static/videos/carousel1.mp4" poster="static/images/clip1_poster.jpg" controls muted playsinline preload="metadata"></video>
+        <video src="static/videos/carousel2.mp4" poster="static/images/clip2_poster.jpg" controls muted playsinline preload="metadata"></video>
+        <video src="static/videos/carousel3.mp4" poster="static/images/clip3_poster.jpg" controls muted playsinline preload="metadata"></video>
+      </div>
+
+      <div class="carousel-nav" aria-label="video carousel navigation">
+        <button type="button" data-target="#results-carousel-videos" data-dir="prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button type="button" data-target="#results-carousel-videos" data-dir="next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POSTER / PAPER PREVIEW ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">Paper / Poster</h2>
+      <!-- If you need a richer viewer, integrate a PDF viewer. For performance, a plain iframe is fine. -->
+      <iframe class="poster-iframe"
+              src="static/pdfs/orthonet_outstanding_orthodontist.pdf"
+              title="Outstanding Orthodontist Paper PDF">
+      </iframe>
+      <p class="is-size-7 is-muted mt-2">
+        Tip: host PDFs under <code>static/pdfs/</code> and ensure server sends correct <code>Content-Type: application/pdf</code>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== BIBTEX ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title">BibTeX</h2>
+      <div class="box bibtex">
+        <pre><code>@article{su2025orthonet,
+  title   = {Outstanding Orthodontist: No More Artifactual Teeth in Talking Face},
+  author  = {Su, Zibo and Zhang, Ziqi and Wei, Kun and Yang, Xu and Deng, Cheng},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2025}
+}</code></pre>
+        <!-- Optional: copy button -->
+        <button id="copy-bibtex" class="button is-small is-light mt-2" aria-label="Copy BibTeX"><i class="fa-regular fa-copy"></i>&nbsp;Copy</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p class="is-size-7">
+        © 2025 OrthoNet Authors. This project page template is adapted from open-source academic templates and
+        is released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Simple, dependency-free carousel
+    function makeCarousel(root) {
+      const sel = Array.from(root.children);
+      let i = 0;
+      const show = (k) => {
+        sel.forEach((el, idx) => {
+          el.style.display = (idx === k) ? '' : 'none';
+        });
+      };
+      show(i);
+      return {
+        next() { i = (i + 1) % sel.length; show(i); },
+        prev() { i = (i - 1 + sel.length) % sel.length; show(i); }
+      };
+    }
+
+    const carousels = {};
+    document.querySelectorAll('.carousel').forEach(c => {
+      carousels['#' + c.id] = makeCarousel(c);
+    });
+
+    document.querySelectorAll('.carousel-nav button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        const dir = btn.getAttribute('data-dir');
+        const api = carousels[target];
+        if (!api) return;
+        (dir === 'next') ? api.next() : api.prev();
+      });
+    });
+
+    // Copy BibTeX
+    const copyBtn = document.getElementById('copy-bibtex');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async () => {
+        const bib = document.querySelector('.bibtex pre')?.innerText ?? '';
+        try {
+          await navigator.clipboard.writeText(bib);
+          copyBtn.classList.add('is-success');
+          copyBtn.innerHTML = '<i class="fa-solid fa-check"></i>&nbsp;Copied';
+          setTimeout(() => {
+            copyBtn.classList.remove('is-success');
+            copyBtn.innerHTML = '<i class="fa-regular fa-copy"></i>&nbsp;Copy';
+          }, 1600);
+        } catch (e) {
+          alert('Copy failed. Please select and copy manually.');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
