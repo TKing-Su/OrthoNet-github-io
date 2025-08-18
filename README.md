@@ -60,12 +60,31 @@ OrthoNet consistently improves **teeth stability, edge clarity, and temporal coh
 
 Here we showcase demo results of OrthoNet applied to various baselines:  
 
-- 🔗 [Demo 2: Hallo2 + OrthoNet](static/videos/hallo2_stitch.mp4)
-- 🔗 [Demo 2: JoyHallo + OrthoNet](static/videos/joyhallo_stitch.mp4)  
-- 🔗 [Demo 1: AniPortrait + OrthoNet](static/videos/aniportrait_stitch.mp4)  
-- 🔗 [Demo 1: AniPortrait + OrthoNet](static/videos/audio2head_stitch.mp4)  
-- 🔗 [Demo 3: EchoMimic + OrthoNet](static/videos/echomimic_stitch.mp4)
-- 
+<p align="center">
+  <b>Hallo2 + OrthoNet</b><br>
+  <video src="static/videos/hallo2_stitch.mp4" controls width="600"></video>
+</p>
+
+<p align="center">
+  <b>JoyHallo + OrthoNet</b><br>
+  <video src="static/videos/joyhallo_stitch.mp4" controls width="600"></video>
+</p>
+
+<p align="center">
+  <b>AniPortrait + OrthoNet</b><br>
+  <video src="static/videos/aniportrait_stitch.mp4" controls width="600"></video>
+</p>
+
+<p align="center">
+  <b>Audio2Head + OrthoNet</b><br>
+  <video src="static/videos/audio2head_stitch.mp4" controls width="600"></video>
+</p>
+
+<p align="center">
+  <b>EchoMimic + OrthoNet</b><br>
+  <video src="static/videos/echomimic_stitch.mp4" controls width="600"></video>
+</p>
+
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
