@@ -23,7 +23,7 @@ We propose **OrthoNet**, a **plug-and-play framework** that works as a *virtual 
 ## 🏗 Framework  
 
 <p align="center">  
-  <img src="static/images/framework.png" alt="OrthoNet Framework" width="600"/>  
+  <img src="static/images/framework2.png" alt="OrthoNet Framework" width="600"/>  
 </p>  
 
 *Figure: OrthoNet consists of two main modules — the Detail-oriented Teeth Aligner (dual-branch DRM-Conv + PKConv) and the Memory-guided Teeth Stabilizer (LTM + STM with cross-attention).*  
@@ -33,6 +33,9 @@ We propose **OrthoNet**, a **plug-and-play framework** that works as a *virtual 
 ## 📊 Experimental Results  
 
 ### Quantitative Metrics  
+
+<div align="center">
+
 | Method              | TSM ↑ | ECI ↑ | SSIM ↑ | FVD ↓ |
 |---------------------|-------|-------|--------|-------|
 | AniPortrait         | 0.753 | 4.068 | 0.847  | 238.5 |
@@ -41,6 +44,8 @@ We propose **OrthoNet**, a **plug-and-play framework** that works as a *virtual 
 | **+ OrthoNet**      | **0.785** | **4.213** | **0.907**  | **237.9** |
 | Hallo2              | 0.686 | 3.953 | 0.879  | 158.2 |
 | **+ OrthoNet**      | **0.813** | **4.249** | **0.906**  | **153.6** |
+
+</div>
 
 OrthoNet consistently improves **teeth stability, edge clarity, and temporal coherence** across multiple baselines.  
 
