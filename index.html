@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="static/icons/optic.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="static/icons/optic.ico">
+
   <!-- Basic -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -75,7 +80,7 @@
         <p class="is-size-5">
           <span>Xidian University</span>
           <br />
-          <span class="tag is-venue is-medium">IJCAI Preprint · 2025</span>
+          <span class="tag is-venue is-medium">IJCAI 2025</span>
         </p>
 
         <div class="buttons is-centered mt-4">
@@ -87,14 +92,8 @@
             <span>Paper (PDF)</span>
           </a>
 
-          <!-- Supplementary (optional) -->
-          <a class="button is-light" href="static/pdfs/orthonet_supplementary.pdf" target="_blank" rel="noopener">
-            <span class="icon"><i class="fa-regular fa-file-lines"></i></span>
-            <span>Supplementary</span>
-          </a>
-
           <!-- Code (optional) -->
-          <a class="button is-light" href="https://github.com/YOUR-ORG/orthonet" target="_blank" rel="noopener">
+          <a class="button is-light" href="https://github.com/TKing-Su/OrthoNet.git" target="_blank" rel="noopener">
             <span class="icon"><i class="fa-brands fa-github"></i></span>
             <span>Code</span>
           </a>
@@ -110,139 +109,316 @@
     </div>
   </section>
 
-  <!-- ===== TEASER ===== -->
+
+    <!-- ===== TEASER ===== -->
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 section-title">Teaser</h2>
-      <div class="teaser">
-        <!-- Replace with your teaser; poster improves LCP -->
-        <video
-          src="static/videos/banner_video.mp4"
-          poster="static/images/IJCAI-poster.jpg"
-          controls
-          muted
-          playsinline
-          preload="metadata">
-        </video>
-        <p class="is-size-6 mt-3">
-          We introduce <b>OrthoNet</b>, a plug-and-play module composed of a <i>Detail-oriented Teeth Aligner</i> and a
-          <i>Memory-guided Teeth Stabilizer</i>, which effectively removes artifactual teeth and maintains cross-frame consistency
-          in audio-driven talking face synthesis.
+      <!-- <h2 class="title is-3 section-title">Teaser</h2> -->
+      <div class="teaser has-text-centered">
+        <!-- 使用模型框架图 -->
+        <img src="static/images/framework.png" 
+            alt="OrthoNet Framework" 
+            class="image is-6by4"
+            style="max-width: 100%; height: auto;">
+
+        <!-- 简介文字 -->
+        <p class="is-size-6 mt-3" style="text-align: justify;">
+          We present <b>OrthoNet</b>, a plug-and-play framework for teeth restoration in talking face videos that operates as a virtual orthodontist.
+          It has two main parts: Detail-oriented Teeth Aligner for extracting precise teeth features and Memory-guided Teeth Stabilizer for maintaining stability over time.
+          Detail-oriented Teeth Aligner uses dualbranch: DRM-Conv preserves fine-grained teeth details, and PKConv captures the overall shape of the teeth, ensuring both small parts and the whole structure are accurately modeled.
+          Memory-guided Teeth Stabilizer has a dual-memory stream inspired by post-orthodontic treatment.
+          LTM maintains the temporal consistency of the teeth, and STM enables teeth adaptation to speech dynamics, similar to how orthodontists use different retainers to retain strength while adapting naturally during speech.
         </p>
       </div>
     </div>
   </section>
+
 
   <!-- ===== ABSTRACT ===== -->
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 section-title">Abstract</h2>
-      <div class="content is-size-6">
+      <h2 class="title is-3 section-title has-text-centered">Abstract</h2>
+      <div class="content is-size-6" style="text-align: justify;">
         <p>
-          Audio-driven talking face methods often suffer from <em>artifactual</em> or <em>inconsistent</em> teeth, degrading realism and temporal coherence.
-          We propose <strong>OrthoNet</strong>, a lightweight, plug-and-play framework that (1) aligns the dental region with
-          shape-aware, detail-preserving cues and (2) stabilizes teeth appearance through a long–short term memory design,
-          yielding natural and temporally consistent results across diverse identities and speaking conditions.
-          Extensive experiments show OrthoNet reduces artifacts and improves perception metrics over strong baselines,
-          without sacrificing lip–audio synchronization. Code and models will be released.
+          Audio-driven talking face synthesis (TFS) enables the creation of realistic speaking videos by combining a single facial image with a speech audio clip.
+          Unlike other facial features that naturally deform during speech, teeth represent unique rigid structures whose shape and size should remain constant throughout the video sequence.
+          However, current methods often produce temporal inconsistencies and artifacts in the teeth region, resulting in a less realistic appearance of the generated videos.
+          To address this, we propose <strong>OrthoNet</strong>, a plug-and-play framework designed to eliminate unrealistic teeth effects in audio-driven TFS.
+          Our method introduces a Detail-oriented Teeth Aligner module, designed to preserve teeth details and adapt to their shape.
+          It works with a Memory-guided Teeth Stabilizer that integrates a long-term memory bank for global teeth structure and a short-term memory module for local temporal dynamics.
+          Through this framework, OrthoNet acts like an orthodontist for existing Audio2Video methods, ensuring that teeth maintain natural rigidity and temporal consistency even under varying degrees of teeth occlusion.
+          Extensive experiments demonstrate that our method makes the teeth in generated videos appear more natural during speech, significantly enhancing the temporal consistency and structural stability of audio-driven video generation.
         </p>
       </div>
     </div>
   </section>
 
+
+
+
+
+
+
+
+  <!-- ===== VIDEO CAROUSEL (5 clips, captions + play/pause) ===== -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Video Showcase</h2>
+
+      <div id="video-carousel" class="vc-container">
+        <!-- Slide 1 -->
+        <figure class="vc-slide active">
+          <video class="vc-video" src="static/videos/hallo2_stitch2.mp4" controls muted playsinline preload="metadata"></video>
+          <figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+            <span style="color: #21940c;">◀ Left: Hallo2</span>
+            &nbsp;|&nbsp;
+            <span style="color: #d11b1b;">Right: Hallo2 + Ours ▶</span>
+          </figcaption>          
+        </figure>
+
+    
+        <!-- Slide 2 -->
+        <figure class="vc-slide">
+          <video class="vc-video" src="static/videos/joyhallo_stitch.mp4" controls muted playsinline preload="metadata"></video>
+          <figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+            <span style="color: #21940c;">◀ Left: JoyHallo</span>
+            &nbsp;|&nbsp;
+            <span style="color: #d11b1b;">Right: JoyHallo + Ours ▶</span>
+          </figcaption>          
+        </figure>
+
+        <!-- Slide 3 -->
+        <figure class="vc-slide">
+          <video class="vc-video" src="static/videos/aniportrait_stitch.mp4" controls muted playsinline preload="metadata"></video>
+          <figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+            <span style="color: #21940c;">◀ Left: AniPortrait</span>
+            &nbsp;|&nbsp;
+            <span style="color: #d11b1b;">Right: AniPortrait + Ours ▶</span>
+          </figcaption>          
+        </figure>
+
+        <!-- Slide 4 -->
+        <figure class="vc-slide">
+          <video class="vc-video" src="static/videos/audio2head_stitch.mp4" controls muted playsinline preload="metadata"></video>
+          <figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+            <span style="color: #21940c;">◀ Left: Audio2Head</span>
+            &nbsp;|&nbsp;
+            <span style="color: #d11b1b;">Right: Audio2Head + Ours ▶</span>
+          </figcaption>   
+        </figure>
+
+        <!-- Slide 5 -->
+        <figure class="vc-slide">
+          <video class="vc-video" src="static/videos/echomimic_stitch.mp4" controls muted playsinline preload="metadata"></video>
+          <figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+            <span style="color: #21940c;">◀ Left: EchoMimic</span>
+            &nbsp;|&nbsp;
+            <span style="color: #d11b1b;">Right: EchoMimic + Ours ▶</span>
+          </figcaption>  
+        </figure>
+      </div>
+
+      <!-- Controls -->
+      <div class="vc-controls has-text-centered">
+        <button id="vc-prev" class="button is-small" aria-label="Previous video">⟨ Prev</button>
+        <button id="vc-toggle" class="button is-small" aria-label="Play or pause current video">► Play</button>
+        <button id="vc-next" class="button is-small" aria-label="Next video">Next ⟩</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Styles (scoped) -->
+  <style>
+  .vc-container{position:relative;max-width:760px;margin:0 auto}
+  .vc-slide{display:none;margin:0}
+  .vc-slide.active{display:block}
+  .vc-video{width:100%;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  .vc-caption{font-size:.95rem;color:#374151;margin-top:.5rem;text-align:center}
+  .vc-controls{margin-top:.75rem;display:flex;gap:.5rem;justify-content:center}
+  </style>
+
+  <!-- Script -->
+  <script>
+  (function(){
+    const slides = Array.from(document.querySelectorAll('#video-carousel .vc-slide'));
+    const videos = slides.map(s => s.querySelector('.vc-video'));
+    const btnPrev = document.getElementById('vc-prev');
+    const btnNext = document.getElementById('vc-next');
+    const btnToggle = document.getElementById('vc-toggle');
+
+    let idx = 0;
+    let rotateTimer = null;
+    const ROTATE_MS = 10000; // 自动切换的间隔（10秒）。如不想自动切换，注释掉 startAutoRotate() 的调用
+
+    function setActive(i){
+      // 停止并隐藏旧视频
+      videos[idx].pause();
+      slides[idx].classList.remove('active');
+
+      // 切到新视频
+      idx = (i + slides.length) % slides.length;
+      slides[idx].classList.add('active');
+
+      // 从头播放当前视频
+      const v = videos[idx];
+      v.currentTime = 0;
+      v.play().catch(()=>{}); // 某些浏览器需要用户交互才允许自动播放
+
+      // 更新按钮文案
+      updateToggleLabel();
+    }
+
+    function updateToggleLabel(){
+      const v = videos[idx];
+      btnToggle.textContent = v.paused ? '► Play' : '❚❚ Pause';
+    }
+
+    // 手动控制
+    btnPrev.addEventListener('click', () => {
+      setActive(idx - 1);
+      restartAutoRotate();
+    });
+
+    btnNext.addEventListener('click', () => {
+      setActive(idx + 1);
+      restartAutoRotate();
+    });
+
+    btnToggle.addEventListener('click', () => {
+      const v = videos[idx];
+      if (v.paused) { v.play().catch(()=>{}); }
+      else { v.pause(); }
+      updateToggleLabel();
+    });
+
+    // 自动轮播
+    function startAutoRotate(){
+      if (rotateTimer) clearInterval(rotateTimer);
+      rotateTimer = setInterval(() => setActive(idx + 1), ROTATE_MS);
+    }
+    function restartAutoRotate(){
+      // 用户手动切换后，重置计时器
+      startAutoRotate();
+    }
+
+    // 初始化
+    setActive(0);
+    startAutoRotate(); // 若不需要自动轮播，注释此行
+  })();
+  </script>
+
+
+
+
+
+
+
+  
   <!-- ===== IMAGE CAROUSEL (RESULTS) ===== -->
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 section-title">Qualitative Results</h2>
+      <h2 class="title is-3 section-title has-text-centered">Qualitative Results</h2>
 
-      <div id="results-carousel-images" class="carousel">
-        <img src="static/images/carousel1.jpg" alt="Qualitative comparison: OrthoNet reduces dental artifacts versus baseline under occlusion." loading="lazy">
-        <img src="static/images/carousel2.jpg" alt="Temporal consistency across frames: stable teeth appearance with OrthoNet." loading="lazy">
-        <img src="static/images/carousel3.jpg" alt="Close-up region: aligned dental structure and improved realism." loading="lazy">
-        <img src="static/images/carousel4.jpg" alt="Robustness across identities and lighting with OrthoNet." loading="lazy">
-      </div>
+      <!-- 第一张图片 -->
+      <figure style="text-align: center;">
+        <img src="static/images/Qualitative-Results-1.png" 
+            alt="Qualitative comparison showing OrthoNet vs. baseline under occlusion." 
+            loading="lazy" 
+            style="display: block; margin: 0 auto; max-width: 100%;">
 
-      <div class="carousel-nav" aria-label="image carousel navigation">
-        <button type="button" data-target="#results-carousel-images" data-dir="prev"><i class="fa-solid fa-chevron-left"></i></button>
-        <button type="button" data-target="#results-carousel-images" data-dir="next"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
+        <figcaption class="is-size-6 mt-2" style="text-align: justify;">
+          Qualitative comparison. 
+          <span style="color: green; font-weight: bold;">Green boxes</span> highlight results generated by the baseline methods, 
+          while <span style="color: red; font-weight: bold;">red boxes</span> show outputs after incorporating our proposed 
+          <b>OrthoNet</b> framework. OrthoNet consistently improves temporal stability and structural consistency of teeth, 
+          particularly under varying degrees of occlusion.
+        </figcaption>
+      </figure>
+
+      <!-- 第二张图片 -->
+      <figure style="text-align: center; margin-top: 2rem;">
+        <img src="static/images/Qualitative-Results-2.png" 
+            alt="Ablation study visualization showing OrthoNet memory modules and convolution effects." 
+            loading="lazy" 
+            style="display: block; margin: 0 auto; max-width: 50%;">
+
+        <figcaption class="is-size-6 mt-2" style="text-align: justify;">
+          Visualization of ablation study results. Without memory modules, the model exhibits irregular teeth variations and 
+          temporal instability, with sudden changes in shape and size across frames. The use of standard convolution also 
+          leads to blurred details and unrealistic artifacts. 
+          In contrast, <b>OrthoNet</b> preserves fine-grained teeth details and maintains structural stability. 
+          Here, <span style="color: green; font-weight: bold;">green boxes</span> indicate degraded outputs from ablated models, 
+          while <span style="color: red; font-weight: bold;">red boxes</span> highlight the improvements achieved by our full design.
+        </figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- ===== YOUTUBE DEMO ===== -->
+
+
+
+
+  <!-- ===== POSTER PREVIEW (A0 portrait, polished) ===== -->
   <section class="section">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 section-title">Demo Video</h2>
-      <div class="video is-16by9">
+      <h2 class="title is-3 section-title has-text-centered">Poster</h2>
+
+      <div class="poster-card">
+        <!-- 使用 iframe，带 page-fit 参数；若不支持，仍可直接显示 PDF -->
         <iframe
-          class="has-ratio"
-          width="640" height="360"
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-          title="OrthoNet Presentation"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
+          class="poster-frame"
+          src="static/pdfs/orthonet_poster.pdf#zoom=page-fit"
+          title="Outstanding Orthodontist Poster (A0 Portrait)">
         </iframe>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== VIDEO CAROUSEL ===== -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 section-title">More Clips</h2>
-
-      <div id="results-carousel-videos" class="carousel">
-        <video src="static/videos/carousel1.mp4" poster="static/images/clip1_poster.jpg" controls muted playsinline preload="metadata"></video>
-        <video src="static/videos/carousel2.mp4" poster="static/images/clip2_poster.jpg" controls muted playsinline preload="metadata"></video>
-        <video src="static/videos/carousel3.mp4" poster="static/images/clip3_poster.jpg" controls muted playsinline preload="metadata"></video>
+        <div class="poster-actions">
+          <a class="button is-light" href="static/pdfs/orthonet_poster.pdf" target="_blank" rel="noopener">
+            <i class="fa-solid fa-up-right-from-square"></i>&nbsp;Open in new tab
+          </a>
+          <a class="button is-light" href="static/pdfs/orthonet_poster.pdf" download>
+            <i class="fa-solid fa-download"></i>&nbsp;Download PDF
+          </a>
+        </div>
       </div>
 
-      <div class="carousel-nav" aria-label="video carousel navigation">
-        <button type="button" data-target="#results-carousel-videos" data-dir="prev"><i class="fa-solid fa-chevron-left"></i></button>
-        <button type="button" data-target="#results-carousel-videos" data-dir="next"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PAPER PREVIEW (robust embed using your S3 link) ===== -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 section-title">Paper</h2>
-
-      <!-- 采用 <object> + 兜底链接，最大化兼容性 -->
-      <object
-        data="https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/5681.pdf"
-        type="application/pdf"
-        aria-label="Outstanding Orthodontist Paper PDF">
-        <p>
-          Your browser can’t display the PDF inline.
-          <a href="https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/5681.pdf" target="_blank" rel="noopener">
-            Open the paper in a new tab
-          </a>.
-        </p>
-      </object>
-
-      <p class="is-size-7 is-muted mt-2">
-        If the inline preview fails on certain browsers, use the
-        <a href="https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/5681.pdf" target="_blank" rel="noopener">direct link</a>.
+      <!-- 兜底（iframe 不可用时显示） -->
+      <p class="is-size-7 has-text-centered" style="margin-top:.75rem;">
+        If the poster does not render inline on your browser, use the buttons above to view or download the PDF.
       </p>
     </div>
   </section>
 
-<!--   ===== POSTER PREVIEW (optional: uncomment when you have it) ===== -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 section-title">Poster</h2>
-      <object data="static/pdfs/orthonet_poster.pdf" type="application/pdf" aria-label="Outstanding Orthodontist Poster PDF">
-        <p>
-          Your browser can’t display the PDF inline.
-          <a href="static/pdfs/orthonet_poster.pdf" target="_blank" rel="noopener">Open the poster in a new tab</a>.
-        </p>
-      </object>
-    </div>
-  </section>
+  <style>
+    /* 海报外观卡片 */
+    .poster-card{
+      max-width: 900px;           /* 桌面端内容宽度上限，可按需调大 */
+      margin: 0 auto;
+      background: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.12);
+    }
+    /* 维持 A0 竖版比例；桌面端给足可视高度；移动端自适应 */
+    .poster-frame{
+      width: 100%;
+      aspect-ratio: 841 / 1189;   /* A0 portrait ratio */
+      height: auto;               /* 由 aspect-ratio 推导高度 */
+      min-height: 60vh;           /* 小屏至少有可阅读高度 */
+      border: none;
+      border-radius: 8px;
+      background: #f8f8f8;        /* PDF 加载前的底色 */
+    }
+    .poster-actions{
+      display: flex;
+      gap: .5rem;
+      justify-content: center;
+      margin-top: .75rem;
+      flex-wrap: wrap;
+    }
+    @media (min-width: 1024px){
+      .poster-frame{ min-height: 85vh; } /* 桌面端更大视窗 */
+    }
+  </style>
  
 
   <!-- ===== BIBTEX ===== -->
@@ -253,7 +429,7 @@
         <pre><code>@article{su2025orthonet,
   title   = {Outstanding Orthodontist: No More Artifactual Teeth in Talking Face},
   author  = {Su, Zibo and Zhang, Ziqi and Wei, Kun and Yang, Xu and Deng, Cheng},
-  journal = {IJCAI Preprint},
+  journal = {IJCAI},
   year    = {2025},
   note    = {URL: https://ijcai-preprints.s3.us-west-1.amazonaws.com/2025/5681.pdf}
 }</code></pre>
