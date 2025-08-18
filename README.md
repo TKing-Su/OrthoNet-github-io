@@ -62,7 +62,7 @@ Here we showcase demo results of OrthoNet applied to various baselines:
 
 <p align="center">
   <b>Hallo2 + OrthoNet</b><br>
-  <video src="static/videos/hallo2_stitch.mp4" controls width="600"></video>
+  <video src="static/videos/hallo2_stitch2.mp4" controls width="600"></video>
 </p>
 
 <p align="center">
