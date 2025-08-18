@@ -83,7 +83,7 @@ Here we showcase demo results of OrthoNet applied to various baselines:
 </div>
 
 <p align="center">
-  <img src="static/gif/aniportrait.gif" width="600"/>
+  <img src="static/gif/aniportraint.gif" width="600"/>
 </p>
 <div align="center">
   <figcaption style="font-weight: bold;">
