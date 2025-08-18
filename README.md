@@ -61,7 +61,7 @@ OrthoNet consistently improves **teeth stability, edge clarity, and temporal coh
 Here we showcase demo results of OrthoNet applied to various baselines:  
 
 <p align="center">
-  <img src="static/videos/hallo2.gif" width="600"/>
+  <img src="static/gif/hallo2.gif" width="600"/>
 </p>
 <div align="center">
   <figcaption style="font-weight: bold;">
@@ -72,7 +72,7 @@ Here we showcase demo results of OrthoNet applied to various baselines:
 </div>
 
 <p align="center">
-  <img src="static/videos/joyhallo.gif" width="600"/>
+  <img src="static/gif/joyhallo.gif" width="600"/>
 </p>
 <div align="center">
   <figcaption style="font-weight: bold;">
@@ -83,7 +83,7 @@ Here we showcase demo results of OrthoNet applied to various baselines:
 </div>
 
 <p align="center">
-  <img src="static/videos/aniportrait.gif" width="600"/>
+  <img src="static/gif/aniportrait.gif" width="600"/>
 </p>
 <div align="center">
   <figcaption style="font-weight: bold;">
@@ -94,7 +94,7 @@ Here we showcase demo results of OrthoNet applied to various baselines:
 </div>
 
 <p align="center">
-  <img src="static/videos/audio2head.gif" width="600"/>
+  <img src="static/gif/audio2head.gif" width="600"/>
 </p>
 <div align="center">
   <figcaption style="font-weight: bold;">
@@ -105,7 +105,7 @@ Here we showcase demo results of OrthoNet applied to various baselines:
 </div>
 
 <p align="center">
-  <img src="static/videos/echomimic.gif" width="600"/>
+  <img src="static/gif/echomimic.gif" width="600"/>
 </p>
 <div align="center">
   <figcaption style="font-weight: bold;">
