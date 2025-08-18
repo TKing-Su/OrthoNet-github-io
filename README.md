@@ -23,7 +23,7 @@ We propose **OrthoNet**, a **plug-and-play framework** that works as a *virtual 
 ## 🏗 Framework  
 
 <p align="center">  
-  <img src="docs/framework.png" alt="OrthoNet Framework" width="600"/>  
+  <img src="static/images/framework.png" alt="OrthoNet Framework" width="600"/>  
 </p>  
 
 *Figure: OrthoNet consists of two main modules — the Detail-oriented Teeth Aligner (dual-branch DRM-Conv + PKConv) and the Memory-guided Teeth Stabilizer (LTM + STM with cross-attention).*  
@@ -49,7 +49,7 @@ OrthoNet consistently improves **teeth stability, edge clarity, and temporal coh
 ### Visual Comparisons  
 
 <p align="center">  
-  <img src="docs/qualitative.png" alt="Qualitative Results" width="700"/>  
+  <img src="static/images/Qualitative-Results-1.png" alt="Qualitative Results" width="700"/>  
 </p>  
 
 *Figure: Comparison between baseline methods (green box) and OrthoNet-enhanced results (red box). Our method significantly improves teeth stability and realism under different occlusion conditions.*  
@@ -60,11 +60,12 @@ OrthoNet consistently improves **teeth stability, edge clarity, and temporal coh
 
 Here we showcase demo results of OrthoNet applied to various baselines:  
 
-- 🔗 [Demo 1: AniPortrait + OrthoNet](demo/aniportrait.mp4)  
-- 🔗 [Demo 2: Hallo2 + OrthoNet](demo/hallo2.mp4)  
-- 🔗 [Demo 3: EchoMimic + OrthoNet](demo/echomimic.mp4)  
-
-*(Please upload your own demo videos in `demo/` folder and update the links above.)*  
+- 🔗 [Demo 2: Hallo2 + OrthoNet](static/videos/hallo2_stitch.mp4)
+- 🔗 [Demo 2: JoyHallo + OrthoNet](static/videos/joyhallo_stitch.mp4)  
+- 🔗 [Demo 1: AniPortrait + OrthoNet](static/videos/aniportrait_stitch.mp4)  
+- 🔗 [Demo 1: AniPortrait + OrthoNet](static/videos/audio2head_stitch.mp4)  
+- 🔗 [Demo 3: EchoMimic + OrthoNet](static/videos/echomimic_stitch.mp4)
+- 
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
