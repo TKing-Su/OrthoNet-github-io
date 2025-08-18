@@ -62,27 +62,27 @@ Here we showcase demo results of OrthoNet applied to various baselines:
 
 <p align="center">
   <b>Hallo2 + OrthoNet</b><br>
-  <img src="static/videos/hallo2_stitch.gif" width="600"/>
+  <img src="static/gif/hallo2.gif" width="600"/>
 </p>
 
 <p align="center">
   <b>JoyHallo + OrthoNet</b><br>
-  <img src="static/videos/joyhallo_stitch.gif" width="600"/>
+  <img src="static/gif/joyhallo.gif" width="600"/>
 </p>
 
 <p align="center">
   <b>AniPortrait + OrthoNet</b><br>
-  <img src="static/videos/aniportrait_stitch.gif" width="600"/>
+  <img src="static/gif/aniportraint.gif" width="600"/>
 </p>
 
 <p align="center">
   <b>Audio2Head + OrthoNet</b><br>
-  <img src="static/videos/audio2head_stitch.gif" width="600"/>
+  <img src="static/gif/audio2head.gif" width="600"/>
 </p>
 
 <p align="center">
   <b>EchoMimic + OrthoNet</b><br>
-  <img src="static/videos/echomimic_stitch.gif" width="600"/>
+  <img src="static/gif/echomimic.gif" width="600"/>
 </p>
 
 
