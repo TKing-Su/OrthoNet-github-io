@@ -35,7 +35,7 @@ We propose **OrthoNet**, a **plug-and-play framework** that works as a *virtual 
 ### Visual Comparisons  
 
 <p align="center">  
-  <img src="static/images/result.png" alt="Qualitative Results" width="700"/>  
+  <img src="static/images/result.jpg" alt="Qualitative Results" width="700"/>  
 </p>  
 
 *Figure: Comparison between baseline methods (green box) and OrthoNet-enhanced results (red box). Our method significantly improves teeth stability and realism under different occlusion conditions.*  
