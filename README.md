@@ -64,27 +64,51 @@ Here we showcase demo results of OrthoNet applied to various baselines:
   <b>Hallo2 + OrthoNet</b><br>
   <img src="static/gif/hallo2.gif" width="600"/>
 </p>
+<figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+  <span style="color: #007bff;">◀ Left: Hallo2</span>
+  &nbsp;|&nbsp;
+  <span style="color: #28a745;">Right: Hallo2 + Ours ▶</span>
+</figcaption>
 
 <p align="center">
   <b>JoyHallo + OrthoNet</b><br>
   <img src="static/gif/joyhallo.gif" width="600"/>
 </p>
+<figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+  <span style="color: #007bff;">◀ Left: JoyHallo</span>
+  &nbsp;|&nbsp;
+  <span style="color: #28a745;">Right: JoyHallo + Ours ▶</span>
+</figcaption>
 
 <p align="center">
   <b>AniPortrait + OrthoNet</b><br>
   <img src="static/gif/aniportraint.gif" width="600"/>
 </p>
+<figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+  <span style="color: #007bff;">◀ Left: AniPortrait</span>
+  &nbsp;|&nbsp;
+  <span style="color: #28a745;">Right: AniPortrait + Ours ▶</span>
+</figcaption>
 
 <p align="center">
   <b>Audio2Head + OrthoNet</b><br>
   <img src="static/gif/audio2head.gif" width="600"/>
 </p>
+<figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+  <span style="color: #007bff;">◀ Left: Audio2Head</span>
+  &nbsp;|&nbsp;
+  <span style="color: #28a745;">Right: Audio2Head + Ours ▶</span>
+</figcaption>
 
 <p align="center">
   <b>EchoMimic + OrthoNet</b><br>
   <img src="static/gif/echomimic.gif" width="600"/>
 </p>
-
+<figcaption class="vc-caption" style="text-align: center; font-weight: bold;">
+  <span style="color: #007bff;">◀ Left: EchoMimic</span>
+  &nbsp;|&nbsp;
+  <span style="color: #28a745;">Right: EchoMimic + Ours ▶</span>
+</figcaption>
 
 ## Acknowledgments
 Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
