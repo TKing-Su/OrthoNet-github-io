@@ -1,6 +1,6 @@
-# OrthoNet: Outstanding Orthodontist for Talking Face Synthesis  
+# OrthoNet
 
-> **No More Artifactual Teeth in Talking Face Generation**  
+> **Outstanding Orthodontist: No More Artifactual Teeth in Talking Face**  
 > Official implementation of the paper: *Outstanding Orthodontist: No More Artifactual Teeth in Talking Face* (Su et al., 2025)  
 
 ---
