@@ -30,26 +30,7 @@ We propose **OrthoNet**, a **plug-and-play framework** that works as a *virtual 
 
 ---
 
-## 📊 Experimental Results  
 
-### Quantitative Metrics  
-
-<div align="center">
-
-| Method              | TSM ↑ | ECI ↑ | SSIM ↑ | FVD ↓ |
-|---------------------|-------|-------|--------|-------|
-| AniPortrait         | 0.753 | 4.068 | 0.847  | 238.5 |
-| **+ OrthoNet**      | **0.847** | **4.321** | **0.884**  | **233.8** |
-| Audio2Head          | 0.662 | 3.968 | 0.899  | 242.4 |
-| **+ OrthoNet**      | **0.785** | **4.213** | **0.907**  | **237.9** |
-| Hallo2              | 0.686 | 3.953 | 0.879  | 158.2 |
-| **+ OrthoNet**      | **0.813** | **4.249** | **0.906**  | **153.6** |
-
-</div>
-
-OrthoNet consistently improves **teeth stability, edge clarity, and temporal coherence** across multiple baselines.  
-
----
 
 ### Visual Comparisons  
 
